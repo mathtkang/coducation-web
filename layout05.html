@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout-05-test</title>
+    <style>
+        .wrap{
+            width:940px;
+            margin:0 auto;
+        }
+        .box1{
+            height:140px;
+            background-color: red;
+        }
+        .box2{
+            height:540px;
+            background-color: blue;
+        }
+        .item{
+            width:450px;
+            height:230px;
+            background-color: yellow;
+            margin-top:20px;
+            margin-right:40px;
+            float:left;
+        }
+        .box3:after{
+            content:"";
+            display:block;
+            clear:both;
+        }
+        .item:last-child{
+            margin-right:0px;
+        }
+        .box4{
+            height: 100px;
+            background-color: cyan;
+            margin-top:20px;
+            position:relative;
+        }
+        .block{
+            width:120px;
+            height:30px;
+            background-color: #333;
+            position:absolute;
+            top:20px;
+            left:50%;
+            margin-left: -60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3">
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="box4">
+            <div class="block"></div>
+        </div>
+    </div>
+</body>
+</html>

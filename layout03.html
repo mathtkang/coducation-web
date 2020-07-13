@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout03</title>
+    <style>
+    .wrap{
+        width:980px;
+        margin:0 auto;
+    }
+    .box1{
+        height: 185px;
+        background-color: blue;
+    }
+    .box2{
+        height: 480px;
+        background-color: purple;
+    }
+    .item{
+        width:300px;
+        height: 200px;
+        margin-top:20px;
+        margin-right:20px;
+        float:left;
+        /* border-radius: 5%; */
+    }
+    .box3:after{
+        content:"";
+        clear:both;
+        display:block;
+    }
+    .item:last-child{
+        margin-right:0;
+    }
+    .pink{
+        background-color: deeppink;
+    }
+    .blue{
+        background-color:skyblue;
+    }
+    .box4{
+        height: 185px;
+        background-color: navy;
+        margin-top:20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box1 wrap"></div>
+    <div class="box2"></div>
+    <div class="box3 wrap">
+        <div class="item pink"></div>
+        <div class="item pink"></div>
+        <div class="item pink"></div>
+        <div class="item blue"></div>
+        <div class="item blue"></div>
+        <div class="item blue"></div>
+    </div>
+    <div class="box4"></div>
+</body>
+</html>
