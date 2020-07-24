@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>background03-self test</title>
+    <style>
+        *{padding:0; margin:0;}
+        a{
+            color:inherit; 
+            text-decoration: none;
+        }
+        li{
+            font-size:12px;
+            float:left;
+        }
+        ul{
+            list-style:none;
+        }
+        /* li{list-style:none;} ul 아니면 li 둘 중 하나에 list-style 적용하면 된다. */
+        ul:after{
+            content:"";
+            clear:both;
+            display:block;
+        }
+/* 여기까지 기본셋 */
+        .wrap{
+            width:860px;
+            height:160px;
+            background-color: #ccc;
+            margin:0 auto;
+            position:relative;
+        }
+        .header{
+            position:absolute;
+            top:10px;
+            right:30px;
+        }
+        .header li{
+            margin-right:30px;
+        }
+        .header li:last-child{
+            margin-right:0;
+        }
+        .footer{
+            /* margin:0 auto;  */
+            /* 여기에서는 position을 줬기 때문에 ㄴ이걸로 중앙배열이 안된다. */
+            position:absolute;
+            bottom:0px;
+            left:50%;   
+            margin-left:-200px;
+            margin-bottom:15px;
+        }
+        .footer li{
+            margin-right:70px;
+        }
+        .footer li:last-child{
+            margin-right:0;
+        }
+        h1{
+            font-size:32px;
+            text-align:center;
+            padding-top:40px;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="header"> <!-- class="util" 이라고 하기도 함 -->
+            <li>로그인</li>
+            <li>회원가입</li>
+            <li>장바구니</li>
+            <li>고객문의</li>
+        </ul>
+        <h1>로고</h1>
+        <ul class="footer"> <!-- class="gnb" 라고 하기도 함 -->
+            <li>브랜드소개</li>
+            <li>메뉴</li>
+            <li>프랜차이즈</li>
+            <li>게시판</li>
+        </ul>
+    </div>
+</body>
+</html>
