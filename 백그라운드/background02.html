@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>background-iconremove</title>
+    <style>
+    ul{
+        list-style: none;
+    }
+    li{
+        float:left;
+        margin-right:50px;
+        padding-left:30px;
+        background-image: url(./images/icon.png);
+        background-repeat:no-repeat;
+        background-position:0 center;
+    }
+    ul:after{
+        display:block;
+        clear:both;
+        content:"";
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+    </ul>
+</body>
+</html>
