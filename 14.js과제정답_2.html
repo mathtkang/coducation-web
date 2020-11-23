@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 문제2. if-else -->
+
+    <script>
+        // John과 Mike는 서로 다른 농구팀에 있다.
+        // 최근 3게임에서 
+        // John의 팀의 점수는 89, 120, 103점이고, Mike의 팀은 116, 94, 123점이다.
+
+        //step1) 각 팀의 평균점수를 구하여라
+        var avgJohn = (89+120+10)/3;
+        var avgMike = (116+94+123)/3;
+        console.log("John팀의 평균은" + avgJohn + "입니다.");
+        console.log("Mike팀의 평균은" + avgMike + "입니다.");
+        
+
+        //step2) 두 팀의 평균점수를 비교하여 어떤 팀의 평균점수가 더 높은지 console에 출력해라.
+        //       점수를 바꿔도 평균점수가 더 높은 팀이 출력되는가? (동점일때도 포함)
+
+        if(avgJohn>avgMike){
+            console.log("John의 팀이 우승했습니다" + avgJohn);
+        }else if(avgJohn<avgMike){
+            console.log("Mike의 팀이 우승했습니다" + avgMike);
+        }else{ //avgMike==avgJohn
+            console.log("점수가 동일합니다");
+        }
+
+        // step3) 추가
+        // Mary의 팀의 점수는 97, 134, 105점이다. 
+        // Mary팀의 평균점수를 구하고, 세 팀중 어떤 팀의 평균점수가 높은지 console에 출력해라.
+        //       점수를 바꿔도 평균점수가 더 높은 팀이 출력되는가? (동점일때도 포함)
+
+        var avgMary = (97+134+105)/3;
+        console.log("Mary팀의 평균은" + avgMary + "입니다.")
+
+        if(avgJohn>avgMike && avgJohn>avgMary){
+            console.log("John의 팀이 우승했습니다" + avgJohn);
+        }else if(avgMike>avgJohn && avgMike>avgMary){
+            console.log("Mike의 팀이 우승했습니다" + avgMike);
+        }else if(avgMary>avgJohn && avgMary>avgMike){
+            console.log("Mary의 팀이 우승했습니다" + avgMary);
+        }else{
+            console.log("3팀의 점수가 동일합니다" + avgMary);
+        }
+    </script>
+</body>
+</html>

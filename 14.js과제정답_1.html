@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Mark와 John은 그들의 BMI를 비교하려고 한다.
+    // Mark : 78kg, 1.69m / John : 95kg, 1.95m
+
+        // step1) Mark와 John의 mass와 height를 변수에 저장해라
+        var massMark = 78;
+        var massJohn = 95;
+        var heightMark = 1.69;
+        var heightJohn = 1.95;
+        
+        // step2) 둘의 BMI를 변수에 저장해라 (이때 BMI = mass / height^2 이고 단위는 생략한다.)
+        // 밑에가 산술연산자
+        var BMIMark = massMark / (heightMark*heightMark)
+        var BMIJohn = massJohn / (heightJohn*heightJohn)
+
+        console.log(BMIMark);
+        console.log(BMIJohn);
+
+        // step3) Mark의 BMI가 John보다 큰지 아닌지를 의미하는 변수를 boolean형태로 출력되도록 만들어라
+        // (hint : 비교연산자 사용)
+        var BMIheigherMark = BMIMark > BMIJohn
+        var BMIheigherJohn = BMIMark < BMIJohn
+
+        // step4) 3번의 변수를 포함해서 콘솔창에 출력해라
+        // (예) "Mark의 BMI가 John의 BMI보다 더 크니? true"
+        console.log("Mark의 BMI가 John의 BMI보다 더 크니?" + BMIheigherMark);
+        console.log("Mark의 BMI가 John의 BMI보다 더 작니?" + BMIheigherJohn);
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 문제 5. prompt, for문 -->
+    <script>
+        // 문제 5-1. 1부터 n까지의 합 구하기
+        // 1부터 어디까지 더하고 싶은지 묻는 변수와 
+        // 그 값을 숫자로 바꿔주는 Number()함수를 통해서
+        // 1부터 더한 숫자의 합을 출력하시오
+
+        // hint) 10까지 더하고 싶다 -> 1+2+3+4+5+6+7+8+9+10=55
+        // 출력 : 55입니다.
+        
+        var sum = 0;
+        // 1부터 어디까지 더하고 싶은가? 총합을 저장하기 위한 변수
+        var number = prompt("1부터 숫자 몇 번까지 더하고 싶습니까?");
+        var num = Number(number);
+        var ans = alert("1부터" + num + "까지 더하겠습니다.");
+        for (var i=0; i<num; i++){
+            // 입력받은 문자열을 숫자로 변환하여 총합 변수에 더함
+            sum += i+1;
+        }
+        document.write(sum);
+
+        // 문제5-2. 평균값 구하기
+        // 문제 5-1에서 구한 값을 이용해서 1부터 n까지의 평균값을 구하자
+
+        var avg = sum/num;
+        document.write('평균값:' + avg);
+    </script>
+</body>
+</html>
