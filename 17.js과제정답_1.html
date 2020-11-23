@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 문제) 입력값을 받는 태그와 버튼 태그가 존재합니다.
+    버튼을 누르면 입력한 값이 홀수인지, 짝수인지 알려주는 함수를 작성해보세요 -->
+
+    <input type = "number" id="num" value="">
+    <button onclick="onclick2()" id="onclickButton">버튼</button>
+    <script>
+        function onclick2() {
+            var num = document.querySelector("#num").value;
+            if(num%2==0){
+                var answer = 'Even';
+                
+            }else{
+                var answer = 'Odd';
+            }
+            document.write(num + " : " + answer);
+        }
+    </script>
+</body>
+</html>

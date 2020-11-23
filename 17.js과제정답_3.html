@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="red" type="button" value="red" onclick="color1()"><br />
+    <input id="orange" type="button" value="orange" onclick="color2()"><br />
+    <input id="yellow" type="button" value="yellow" onclick="color3()"><br />
+    <input id="green" type="button" value="green" onclick="color4()"><br />
+    <input id="blue" type="button" value="blue" onclick="color5()"><br />
+    <input id="navy" type="button" value="navy" onclick="color6()"><br />
+    <input id="purple" type="button" value="purple" onclick="color7()"><br /> 
+    
+    <script>
+        var button = document.getElementsByTagName('input');
+        console.log(document.querySelector('input'))
+        document.querySelector('input') // : 같은 input이 여러개면 첫번째만 가져와줌
+
+        // hint) document.getElementsByTagName('input')[i].style.backgroundColor = "gray"; 
+        // 또는  document.getElementsById('red').style.backgroundColor = "red";
+
+        arr = ["red", "orange", "yellow", "green", "blue", "navy", "purple"]
+
+        function color1() {
+            button[0].style.backgroundColor = "red"; 
+            // document.getElementById('red').style.backgroundColor = "red";
+        }
+
+        function color2() { 
+            button[1].style.backgroundColor = "orange";
+        }
+
+        function color3() { 
+            button[2].style.backgroundColor = "yellow";
+        }
+
+        function color4() { 
+            button[3].style.backgroundColor = "green";
+        }
+
+        function color5() { 
+            button[4].style.backgroundColor = "blue"; 
+        }
+
+        function color6() { 
+            button[5].style.backgroundColor = "navy"; 
+        }
+
+        function color7() { 
+            button[6].style.backgroundColor = "purple"; 
+        }
+
+    </script>
+</body>
+</html>
