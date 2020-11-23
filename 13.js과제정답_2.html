@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 문제2)
+    document.getElementById("result").innerHTML 와
+    document.querySelector("#result").innerText 의 차이점은? -->
+    <div id="result">hello world</div>
+
+    <!-- 정답) -->
+    <script>
+    document.getElementById("result").innerHTML = "<span>hello</span>";
+    // 안의 모든 문자가 보임(태그를 글자로 인식) : <span>hello</span>
+    document.querySelector("#result").innerText = "<span>hello</span>";
+    // 찐 내용물만 보임(태그를 태그로 인식) : hello
+    </script>
+</body>
+</html>

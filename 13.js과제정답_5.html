@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 문제5) 아래와같은 식을 변수를 이용해서 간단하게 표현해보세요
+    alert(100 + 10);
+    alert((100 + 10) / 10);
+    alert(((100 + 10) / 10) - 10);
+    alert((((100 + 10) / 10) - 10) * 10);
+
+    // 정답)
+    var h = 100, t=10
+    var a = h+t;
+    alert(a);
+    alert(a/t);
+    alert((a/t)-t);
+    alert(((a / t) - t)* t);
+
+    var a = 100;
+    a += 10; //a = a + 10
+    alert(a); // 110
+    a /= 10 // a = a / 10
+    alert(a) //11   
+</script>
+</body>
+</html>
