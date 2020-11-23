@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수와 for문 이용해서 팩토리얼 계산하기</title>
+</head>
+<body>
+    <!-- 함수, for문) 팩토리얼 계산 -->
+    <input type="text" id="n">
+    <button onclick="num()">실행</button>
+
+    <script> 
+    function num(){ 
+        var result = document.querySelector("#n").value;
+        // 이게 함수 안에 들어와 있어야함
+        // 그래야 버튼이 클릭되었을때 함수가 실행되어서 결괏값이 나온다. 그렇지않고 밖에있으면 
+        var number = Number(result);
+        var output = 1;
+        for(var i = 1; i <= number; i++){
+            // output += output*i;  //output += output*i 일때는 i < numbe 등호 없이 (이미 한번 더 한 셈이니까)
+            output *= i; //output *= i 일때는 i <= numbe 등호 존재
+            }
+        console.log(result)
+        document.write(result+'!='+output);
+    }
+    </script>
+</body>
+</html>

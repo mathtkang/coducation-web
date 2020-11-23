@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학점 반환 프로그램</title>
+</head>
+<body>
+    <script>
+        // 점수를 입력하면 학점을 반환해주는 프로그램
+        // 90점이상:학점A
+        // 80점이상:학점B
+        // 70점이상:학점C
+        // 60점이상:학점D
+        // 나머지는:학점F
+
+        var score = prompt('점수를 입력해주세요.');
+        if(score >= 90){
+            console.log("학점A");
+        }else if(score >= 80){ //여기서 90미만은 조건으로 안해줘도 됨 - 이미 위의 조건을 걸러서 내려온 것이기 때문
+            console.log("학점B");
+        }else if(score >= 70){
+            console.log("학점C");
+        }else if(score >= 60){
+            console.log("학점D");
+        }else{
+            console.log("학점F");
+        }
+    </script>
+</body>
+</html>

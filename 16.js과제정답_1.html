@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+</head>
+<body>
+    <script>
+    // 1. id 가 admin 이고 password 가 1111 일 때만 '환영합니다' 출력하세요
+    id = prompt('아이디를 입력해주세요.');
+    password = prompt('비밀번호를 입력하세요.');
+
+    if (id === 'admin' && password === '1111') {
+        document.write('환영합니다');
+    }
+
+    // 2. id가 admin이 아니면 '아이디가 틀렸습니다.' 를 출력하고
+    //    pwd가 1111이 아니면 '비밀번호가 틀렸습니다.' 출력하세요
+    id = prompt('아이디를 입력해주세요.');
+    password = prompt('비밀번호를 입력하세요.');
+    
+    if (id !== 'admin') {
+        document.write('아이디가 틀렸습니다.');
+    }
+    if(password !== '1111'){
+        document.write('비밀번호가 틀렸습니다.');
+    }
+
+    </script>
+</body>
+</html>
