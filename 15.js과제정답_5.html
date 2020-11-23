@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홀수짝수 구분하기</title>
+</head>
+<body>
+    <script>
+        // 1. 콘솔창에서 함수를 호출하면
+        // 내가 입력한 매개변수 값이 짝수인지 홀수인지 알려주세요 (if문을 써도 되고, switch문을 써도 됩니다.)
+        function solution1(num1) {
+            if(num1%2==0){
+                var answer = 'Even';
+            }else{
+                var answer = 'Odd';
+            }
+            return answer;
+        }
+        console.log(solution1(33));
+
+        //2. 콘솔창에서 함수를 호출하면
+        // 내가 입력한 매개변수 값이 3의 배수인지 아닌지 알려주세요.
+        function solution2(num2) {
+            if(num2%3==0){
+                var answer = num2+"는 3의 배수가 맞습니다.";
+            }else{
+                var answer = num2+"는 3의 배수가 아닙니다.";
+            }
+            return answer;
+        }
+        console.log(solution2(33));
+
+    
+    
+    </script>
+</body>
+</html>

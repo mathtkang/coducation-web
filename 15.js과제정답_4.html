@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수,내장객체</title>
+</head>
+<body>
+<!-- '나이 계산하기'라는 버튼을 클릭하면 
+    태어난 연도를 입력할 수 있는 알림창을 띄우고 
+    입력받은 연도를 1)2) 각각의 내장객체를 이용해서 출력해라-->
+    <button onclick="num()">나이 계산하기</button>
+    <p id="year"></p>
+    
+    <script>
+        function num(){
+            var ans = prompt("태어난 연도를 입력하세요.");
+        // 1-1) 내장객체 Number()를 이용해서 
+            var answer = Number(2020-ans+1);
+            // document.getElementById("year").innerHTML = "당신의 나이는 "+answer+"살 입니다.";
+
+        // 1-2) 내장객체 Date()를 이용해서
+            var date = new Date();
+            // Date() 객체의 속성값
+            // .getFullYear() //현재의 년도 출력
+            // .getMonth() //현재의 월 출력 (0월부터 시작해서 우리의 1월을 0월로 인식)
+
+            console.log(date.getFullYear()); 
+            console.log(date.getMonth()); 
+            console.log(date.getFullYear()-ans);
+
+            document.getElementById("year").innerHTML = date.getFullYear()-ans+"살 입니다.";
+            // document.getElementById("year").innerHTML = "당신의 나이는 "+date.getFullYear()-ans+"살 입니다."; //이렇게 하면 NaN살로 출력된다
+            // 그 이유는 귀요미11, 2귀요미 처럼 문자형을 먼저 작성하고 숫자를 뒤에 작성했기 때문에 숫자를 문자형으로 봐서 그렇다
+        } 
+    </script>
+
+</body>
+</html>

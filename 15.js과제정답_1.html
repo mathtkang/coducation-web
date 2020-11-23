@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별만들기</title>
+</head>
+<body>
+    <script>
+        var star = ''; //자료형이 문자형으로 인식되도록! 초기화값을 ''으로 해준다.
+
+        // for문 1번 사용
+        for(var i = 0; i<5; i++){
+            star += "*";
+            document.write(star+"<br>")
+        }    
+
+        document.write('<hr>') // <hr> : 수평선긋기 태그
+
+        // for문 2번사용
+        for(var i = 0; i<5; i++){ 
+            for(var j=0; j<=i; j++){    // 엑셀로-손코딩
+                star = "*";             // star += "*" 이면 안됨
+                document.write(star);
+            }
+            document.write("<br>");
+        }
+
+        document.write('<hr>')          
+
+        // 반대로 큰수>작은수
+        for(var m = 5; m>0; m--){
+            for(var n = 0; n<m; n++){
+                star = "*"
+                document.write(star);
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

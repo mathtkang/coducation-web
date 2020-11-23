@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 질문!! 메소드, 함수 차이?
+        // 답변!! 메소드는 '객체안에 선언된 함수' 이다.
+
+    // 1. 상품정보를 product변수(객체)에 입력해주세요.
+    //상품명 : 불닭볶음면, 상품번호 :1, 가격 : 2000원, 카테고리 : 라면류
+    var product = {
+        name : "붉닭볶음면",
+        number : 1,
+        price : 2000,
+        category : "라면류"
+    }
+    
+
+    // 2. 주어진 객체의 정보를 알려주세요
+    var dog = {
+        name : "바둑이", 
+        age : 5,
+        food : "사료",
+        IsPerson : false
+    }
+    // 출력값1 : 객체의 이름은 바둑이 입니다.
+    document.write("객체의 이름은 " + dog.name + " 입니다.");
+
+    // 출력값2 : 바둑이가 먹는 음식은 사료입니다.
+    document.write(dog.name + "가 먹는 음식은" + dog.food + "입니다.");
+
+    // 수정하고 출력값3 :알고보니 바둑이가 먹는 음식은 밥이었습니다.
+    dog.food = "밥";
+    document.write("알고보니 "+dog.name + "가 먹는 음식은" + dog.food + "이었습니다.");
+
+    // 수정하고 출력값4 : 알고보니 바둑이는 사람이었습니다.
+    dog.IsPerson = true;
+    if(dog.IsPerson == true){
+        document.write(dog.name+"는 사람입니다.");
+    }else{
+        document.write(dog.name+"는 사람이 아닙니다.");
+    }
+
+    // 수정하고 출력값5 : 바둑이의 나이는 15 입니다.
+    dog.age = 15;
+    document.write(dog.name+"의 나이는 " + dog.age + " 입니다.");
+
+    
+    // 3. 표와 같이 객체를 생성하고
+    // toyRobot.showStock() 메소드를 호출해서 상품정보를 보여줘라
+
+        var toyRobot = {
+            productId : 123-12,
+            name : "Robot",
+            price : 25000,
+            madeIn : "Korea",
+            quantitly : 10,
+            showStock: function() {
+                document.write(toyRobot.name + "제품은 " + toyRobot.quantitly + "개 남아있습니다.");
+                // 여기서 우리는 showStock을 하나의 값이 아니라 함수로 보려고한다.
+                // 그럴때 이 함수(showStock)를 메소드라고 한다.
+            }
+        }
+        
+        console.log(toyRobot.showStock());
+    
+    </script>
+</body>
+</html>
