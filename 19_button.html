@@ -6,14 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <input type="button" value="버튼" onclick="document.querySelector('body').style.backgroundColor='black';"> -->
-
-    <button onclick = "click2()" >버튼</button>
+    <ul id="target">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <button onclick="get()">append</button>
+    <button onclick="set()">insert</button>
     <script>
-        function click2() {
-            var button = document.querySelector('body');
-            button.style.backgroundColor='black';
+    //문제) append 버튼을 누르면 HTML/CSS 밑으로 JAVA SCRIPT가 추가되도록
+        // insert 버튼을 누르면 HTML/CSS 위로 JAVA SCRIPT가 추가되도록
+        function get(){
+            var target = document.getElementById('target')
+            target.innerHTML += '<li>JAVA SCRIPT</li>'
+            // target.innerHTML = target.innerHTML + '<li>JAVA SCRIPT</li>'
+            // var a = '안녕'
+            // a = a + '하세요'
+            // a = '안녕하세요'
+            // alert(a) / 안녕하세요
         }
+        function set(){
+            var target = document.getElementById('target')
+            target.innerHTML = '<li>JQuery</li>' + target.innerHTML
+            // var a = '하세요'
+            // b = '안녕' + a
+            // alert(b) / 안녕하세요
+            // '<li>JQuery</li>' += target.innerHTML / 이런식으로 문자를 앞에쓰진 않음 / 변수 = 문자
+        }
+
     </script>
 </body>
 </html>
