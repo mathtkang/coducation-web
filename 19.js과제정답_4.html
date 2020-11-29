@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .object{
+            background:#ccc;
+            font-weight: bold;
+        }
+        .active{
+            background:yellowgreen;
+            color:tomato;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>javascript
+            <ul>
+                <li class="object">javascript core</li>
+                <li class="object">dom</li>
+                <li class="object">bom</li>
+            </ul>
+        </li>
+    </ul>
+    <button onclick="clickMenu(li_1)">check_1</button>
+    <button onclick="clickMenu(li_2)">check_2</button>
+    <button onclick="clickMenu(li_3)">check_3</button>
+<script>
+    var li_1 = document.getElementsByClassName('object')[0]; //밖에존재해야함
+    var li_2 = document.getElementsByClassName('object')[1];
+    var li_3 = document.getElementsByClassName('object')[2];
+    // clickMenu(li_1)
+
+
+    function clickMenu(a){//이때 a가 될 수 있는 것은 li_1, li_2, li_3이다.
+        console.log(a) //콘솔창으로 해당 태그 확인
+        console.log(a.classList)  //콘솔창으로 a의 클래스명 확인
+        // 한번클릭하면
+
+        a.classList.toggle('active'); // console에 'clickMenu(li_?)' 입력하면 토글로 인식됨
+        // // 위의 a.classList.toggle('active') 과 밑의 말이 같은 말
+        // li_1.classList.add('active')
+        // li_1.classList // [object, active]   // 뒤에가 더 상위개념이라 인식을 뒤의 것으로 함
+        // li_1.classList.remove('active')
+        // li_1.classList // [object]
+    }
+</script>
+</body>
+</html>

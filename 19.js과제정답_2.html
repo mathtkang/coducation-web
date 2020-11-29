@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .default{
+            border: black 1px solid;
+            height: 100px;
+        }
+        .space{
+            width:100%;
+            height: 100px;
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="default">space</div>
+    <button onclick = "click1()">Add</button>
+    <button onclick = "click2()">Remove</button>
+    <script>
+        var button = document.getElementsByClassName('default')[0];
+        function click1(){
+            button.classList.add('space');
+        }
+        function click2(){
+            button.classList.remove('space');
+        }
+    </script>
+
+</body>
+</html>
