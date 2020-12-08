@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        table{
+            width: 200px;
+            height: 300px;
+            color:white;
+            text-align: center;
+            font-size: 20px;
+            border-collapse: collapse;
+        }
+        .accept{    
+            width: 200px;
+            height: 50px;
+            color:white;
+            font-size: 30px;
+            background-color: rgb(58, 57, 57);
+            border: solid black 0.001px;
+            text-align: right;
+            padding-right:15px;
+        }
+        .ac{
+            width: 150px;
+            height: 50px;
+            background-color: rgb(85, 84, 84);
+            /* border: solid black 0.1px; */
+        }
+        td{
+            width: 50px;
+            height: 50px;
+            border: solid black 0.1px;
+            background-color:gray;
+        }
+        td:last-child {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4">
+                <input type="text" class="accept" value="0">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="ac">AC</td>
+            <td class="sign">/</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td class="sign">*</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td class="sign">-</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td class="sign">+</td>
+        </tr>
+        <tr>
+            <td colspan="2">0</td>
+            <td>.</td>
+            <td id="result">=</td>
+        </tr>
+    </table>
+</body>
+</html>

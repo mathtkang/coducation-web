@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button{
+            border-radius : 5px;
+        }
+        button:hover{
+            color : white;
+            background-color:#ccc;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="number1">숫자1</label>
+        <input type="text" id="number1">
+        <label for="number2">숫자2</label>
+        <input type="text" id="number2">
+    </div>
+    <div>
+        <button onclick="calculate('plus')">더하기계산</button>
+        <button onclick="calculate('minus')">빼기계산</button>
+        <button onclick="calculate('times')">곱하기계산</button>
+        <button onclick="calculate('divide')">나누기계산</button>
+    </div>
+    <div>
+        <label for="result">결과</label>
+        <input type="text" id="result">
+    </div>
+    <script> 
+        function plus(a, b) {
+            return a+b;
+        }
+        function minus(a, b) {
+            return a-b;
+        }
+        function times(a, b) {
+            return a*b;
+        }
+        function divide(a, b) {
+            return a/b;
+        }
+        // 함수가 실행되었을때 입력되어있는 value값을 불러오기위해서
+        // 변수 a와 b는 함수 안에 존재해야한다(지역변수)
+        function calculate(type) {
+            var a = Number(document.querySelector("#number1").value);
+            var b = Number(document.querySelector("#number2").value);
+            var c // 반환할 수 있는 방을 하나 만들어주는 것이다.
+            if (type == 'plus') {
+                c = plus(a,b)
+            } else if(type == 'minus') {
+                c = minus(a,b)
+            } else if(type == 'times') {
+                c = times(a,b)
+            } else {
+                c = divide(a,b)
+            }
+            document.querySelector("#result").value = c; 
+            //.innerHTML는 안되고 .value로 해야한다. <input>태그가 닫는태그가 없기때문!
+        }
+    </script>
+</body>
+</html>
